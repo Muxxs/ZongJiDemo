@@ -5,7 +5,7 @@ import json
 app = Flask(__name__)
 
 
-@app.route('/WritePassage', methods=['POST'])
+@app.route('/WritePassage/', methods=['POST'])
 def GetPassage():
     Passage = request.form['passage']
     AuthorID = int(request.form['AuthorID'])
@@ -18,7 +18,7 @@ def GetPassage():
         return 0
 
 
-@app.route('/GetPassage', methods=['POST'])
+@app.route('/GetPassage/', methods=['POST'])
 def GetPassage():
     ID = request.form['id']
     try:
@@ -29,7 +29,7 @@ def GetPassage():
         return 0
 
 
-@app.route('/GetInfor', methods=['POST'])
+@app.route('/GetInfor/', methods=['POST'])
 def GetInfro():
     ID = request.form['id']
     try:
@@ -40,7 +40,7 @@ def GetInfro():
         return 0
 
 
-@app.route('/GetUser', methods=['POST'])
+@app.route('/GetUser/', methods=['POST'])
 def GetUser():
     ID = request.form['id']
     try:
@@ -51,7 +51,7 @@ def GetUser():
         return 0
 
 
-@app.route('/Sign', methods=['POST'])
+@app.route('/Sign/', methods=['POST'])
 def SignUp():
     Name = request.form['name']
     Pw = request.form['passwd']
