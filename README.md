@@ -3,7 +3,7 @@
 
 **app.py**是主要的服务器文件，**operation.py**就是控制tinydb的读写。
 
-**Learning.py**会学习用户和景点
+**Learning.py**会学习用户和景点（待写
 
 **Document.md**写了json文件的结构。
 
