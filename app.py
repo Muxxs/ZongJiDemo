@@ -5,6 +5,30 @@ import json
 app = Flask(__name__)
 
 
+@app.route('/WritePassage', methods=['POST'])
+def GetPassage():
+    Passage = request.form['passage']
+    AuthorID = int(request.form['AuthorID'])
+    WriteTime = request.form['time']
+    PlaceID = request.form['id'].split("-")
+    try:
+        P.Insert(Passage, AuthorID, WriteTime, PlaceID)
+        return 1
+    except:
+        return 0
+
+
+@app.route('/GetPassage', methods=['POST'])
+def GetPassage():
+    ID = request.form['id']
+    try:
+        PassOp = PassageDBoperate()
+        res = PassOp.Search(ID)
+        return json.dumps(res)
+    except:
+        return 0
+
+
 @app.route('/GetInfor', methods=['POST'])
 def GetInfro():
     ID = request.form['id']

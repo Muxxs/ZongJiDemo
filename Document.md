@@ -7,7 +7,7 @@
 |   ---  |   ---   | --- |
 | UserID | 用户数量 | int |
 | InfroID| 景点数量 | int |
-
+| PassID | 文章数量 | int |
 ### User.json 结构
 | Name| Content | type|
 | --- |  ---   |---|
@@ -22,6 +22,14 @@
 |  ID  |  城市ID  | int |
 | name |  景点名称 | str |
 | tag  |  特征    |int[]|
+
+### passage.json 结构
+| Name | Content | type|
+| ---  |   ---   | --- |
+| PassageID|  文章ID  | int  |
+| AuthorID |  作者ID  | int  |
+| PlaceID  |  涉及景点 | int[]|
+| Passage  |  文章内容 | str  |
 
 ## 特征&喜好
 ### 分类方法
