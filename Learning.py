@@ -7,4 +7,4 @@ from sklearn.naive_bayes import GaussianNB
 
 class Learn:
     def LearnPeople(self):
-        clf = GaussianNB()  # 分类器
+        clf = GaussianNB()

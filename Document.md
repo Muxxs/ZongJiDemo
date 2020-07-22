@@ -3,10 +3,10 @@
 ## 数据库结构
 
 ### Config.json 结构
-| Name| Content | type|
-| --- |  ---   |  --- |
-|UserID| 用户数量 | int|
-|InfroID|景点数量|int|
+|  Name  | Content | type|
+|   ---  |   ---   | --- |
+| UserID | 用户数量 | int |
+| InfroID| 景点数量 | int |
 
 ### User.json 结构
 | Name| Content | type|
@@ -27,4 +27,4 @@
 ### 分类方法
 - 将各种景点进行标签化
 - 同样的标签喜好程度标于用户的like中
-  - like和tag的数组size相同，相对应
+  - like和tag的数组size相同，一一相对应

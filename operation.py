@@ -47,12 +47,12 @@ class UserDBoperate:  # User Database Operations
         self.data = TinyDB('config/user.json')
         self.table = self.data.table('user')
 
-    def Insert(self, user, pw, like):
+    def Insert(self, user, pw, like): # Sign Up
         D = ConfigDBoperate()
         D.UserIDPlus()
         self.table.insert({"id": D.GetAllUserID(), "user": user, 'pw': pw, 'like': like})
 
-    def Search(self, id):
+    def Search(self, id): # Get information
         Q = Query()
         return self.table.search(Q.id == int(id))[0]
 
@@ -66,7 +66,7 @@ class Show:  # To Show all information
         self.InforID = self.Config.GetAllInforID()
 
     def GetIDs(self):  # Size of the data
-        print(self.UserID, self.InforID)
+        print("User ID: "+str(self.UserID)+"\nInforID: "+str(self.InforID))
 
     def AllUser(self):  # Show every User
         for i in range(1, self.UserID + 1):
