@@ -58,7 +58,7 @@ class ConfigDBoperate:  # Data for json's
         conn.commit()
 
 
-class InfroDBoperate:  # Scenic spot Information
+class InforDBoperate:  # Scenic spot Information
     def __init__(self):
         self.cursor = conn.cursor()
 
@@ -89,7 +89,7 @@ class UserDBoperate:  # User Database Operations
         for i in like: list += str(i) + "-"
         list = list[:-1]
         A = ConfigDBoperate()
-        SQL = 'INSERT INTO Beijing (ID,User, pw,like) VALUES (%d, "%s","%s","%s")' % (
+        SQL = 'INSERT INTO `User` (ID, `User`, pw, `like`) VALUES (%d, "%s","%s","%s")' % (
             A.GetAllUserID() + 1, user, pw, list)
         self.cursor.execute(SQL)
         conn.commit()
@@ -125,7 +125,7 @@ class PassageDBoperate:  # Passages Database Operations
 
 class Show:  # To Show all information
     def __init__(self):
-        self.Infor = InfroDBoperate()
+        self.Infor = InforDBoperate()
         self.User = UserDBoperate()
         self.Config = ConfigDBoperate()
         self.UserID = self.Config.GetAllUserID()
